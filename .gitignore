@@ -1,3 +1,10 @@
+bin/
+.classpath
+.project
+.settings/
+.metadata/
+**/modele-info.java
+
 # Compiled class file
 *.class
 
