@@ -1,0 +1,16 @@
+4
+9780596009205,HeadFirstJava,KathySierra,2005
+9780132350884,CleanCode,RobertMartin,2008
+9780134494166,CleanArchitecture,RobertMartin,2017
+9780201633610,DesignPatterns,GoF,1994
+9780134685991,EffectiveJava,JoshuaBloch,2018
+9780201485677,Refactoring,MartinFowler,1999
+9780134190440,IntroductionToAlgorithms,CLRS,2009
+9780136019701,OperatingSystems,AndrewTanenbaum,2007
+9780132145681,ComputerNetworking,JamesKurose,2012
+9780262033848,IntroductionToAlgorithmsThirdEd,Cormen,2009
+9780131103627,CProgrammingLanguage,Kernighan,1988
+9780134092669,JavaConcurrencyInPractice,BrianGoetz,2006
+9780133942487,CleanCoder,RobertMartin,2011
+9780321356680,EffectiveCPlusPlus,ScottMeyers,2005
+9780201700732,TheArtOfComputerProgramming,DonaldKnuth,1997
