@@ -56,7 +56,7 @@ public class BTree<E extends Comparable<E>> {
             }
             mediana = push(current.childs.get(pos[0]), cl);
             if (up) {
-                // Pasamos (orden - 1) como límite máximo de llaves
+                // Pasar (orden - 1) como límite máximo de llaves
                 if (current.nodeFull(this.orden - 1))
                     mediana = dividedNode(current, mediana, pos[0]);
                 else {
@@ -287,6 +287,64 @@ public class BTree<E extends Comparable<E>> {
             parent.childs.set(i + 1, parent.childs.get(i + 2));
         }
         parent.count--;
+    }
+    
+    
+    //metodos de uso de 	Biblioteca
+    public void searchWithLog(E key) {
+        searchWithLog(root, key);
+    }
+
+    private void searchWithLog(BNode<E> node, E key) {
+        if (node == null) return;
+        System.out.print("Nodo " + node.idNode + " -> ");
+        int[] pos = new int[1];
+        boolean found = node.searchNode(key, pos);
+        if (!found) {
+            searchWithLog(node.childs.get(pos[0]), key);
+        } else {
+            System.out.println("Encontrado en Nodo " + node.idNode);
+        }
+    }
+    //recorrido
+    public void inOrder() { inOrder(root); }
+
+    private void inOrder(BNode<E> node) {
+        if (node == null) return;
+        for (int i = 0; i < node.count; i++) {
+            inOrder(node.childs.get(i));
+            System.out.println(node.keys.get(i));
+        }
+        inOrder(node.childs.get(node.count));
+    }
+    
+    public int getAltura() {
+        int altura = 0;
+        BNode<E> actual = root;
+        while (actual != null) {
+            altura++;
+            // Bajar por el primer hijo(camino más corto/directo)
+            actual = actual.childs.get(0);
+        }
+        return altura;
+    }
+    
+    public int countTotal() {
+        return countTotal(root);
+    }
+
+    private int countTotal(BNode<E> node) {
+        if (node == null) return 0;
+        
+        // Sumar las llaves del nodo actual
+        int total = node.count;
+        
+        // Sumar recursivamente todas las llaves de sus hijos
+        for (int i = 0; i <= node.count; i++) {
+            total += countTotal(node.childs.get(i));
+        }
+        
+        return total;
     }
     
     

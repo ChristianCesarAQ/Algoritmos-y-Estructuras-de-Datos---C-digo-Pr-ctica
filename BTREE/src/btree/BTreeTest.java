@@ -24,7 +24,7 @@ public class BTreeTest {
         }
 
         System.out.println("\n--- 3. Probando rango ---");
-        // Debería imprimir: 6 7 10 12 17 20
+        //imprimir: 6 7 10 12 17 20
         arbol.searchRange(6, 20);
 
         System.out.println("\n--- 4. Probando eliminacion ---");

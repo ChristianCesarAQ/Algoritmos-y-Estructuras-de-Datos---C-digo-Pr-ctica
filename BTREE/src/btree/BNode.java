@@ -53,12 +53,10 @@ public class BNode<E> {
 	    }
 	}
 	
-	
-	
 	//Return the keys found in the node.
 	@Override
     public String toString() {
-        // Formato: IdNodo | [claves...]
+        //IdNodo | [claves...]
         StringBuilder sb = new StringBuilder();
         sb.append("IdNodo: ").append(this.idNode).append(" | Claves: [");
         for (int i = 0; i < count; i++) {
@@ -68,6 +66,5 @@ public class BNode<E> {
         sb.append("]");
         return sb.toString();
     }
-	
 	
 }
