@@ -5,14 +5,14 @@ public class HashO {
 	ListLinked<Register>[] table; //array de listas enlazadas
 	private int size;
 	
-	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@SuppressWarnings("unchecked")
 	public HashO(int size) {
 		this.size = size;
 		this.table = new ListLinked[size];
 		
 		//inicializacion de posciones con lista enlazada vacia
 		for(int i=0; i < size; i++) {
-			table[i] = new ListLinked();
+			table[i] = new ListLinked<>();
 		}
 	}
 	
